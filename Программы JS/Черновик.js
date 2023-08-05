@@ -1,1 +1,3 @@
-console.log(Math.random() * (9999 - 2333 + 1) + 2333)
+const array = [15, 136, 'bruh']
+
+console.log(array.includes('bruh', 0))

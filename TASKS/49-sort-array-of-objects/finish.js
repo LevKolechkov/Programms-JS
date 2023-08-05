@@ -8,6 +8,10 @@
  *
  * 3. Оригинальный массив должен остаться без изменений
  */
+const sortProductsByPrice = (products) =>
+{
+  return products.map(el => el).sort((currentObject, nextObject) => currentObject.price - nextObject.price)
+}
 
 const inputProducts = [
   {
@@ -36,8 +40,8 @@ const inputProducts = [
   },
 ]
 
-// const sortedProducts = sortProductsByPrice(inputProducts)
+const sortedProducts = sortProductsByPrice(inputProducts)
 
-// console.log(sortedProducts) // Массив отсортированных товаров
+console.log(sortedProducts) // Массив отсортированных товаров
 
-// console.log(inputProducts) // Оригинальный массив не должен измениться
+console.log(inputProducts) // Оригинальный массив не должен измениться

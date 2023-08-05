@@ -14,6 +14,20 @@
  *  - changeGreeting
  */
 
+const createGreeting = () =>
+{
+  let greetingString = 'Hey, this is'
+
+  const greet = (name) => greetingString + ` ${name}`
+
+  const changeGreeting = (anotherString) => { greetingString = anotherString }
+
+  return {
+    greet,
+    changeGreeting
+  }
+}
+
 const greeting1 = createGreeting()
 
 console.log(greeting1.greet('Bob'))

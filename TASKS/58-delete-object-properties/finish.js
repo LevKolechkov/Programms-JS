@@ -7,7 +7,8 @@
  * не будут доступны после операции деструктуризации.
  */
 
-let person = {
+let person = 
+{
   _id: '5ad8cefcc0971792dacb3f1f',
   index: 4,
   processed: false,
@@ -16,6 +17,15 @@ let person = {
   name: 'Samanta Larsen',
   cartId: 435,
 }
+
+{
+  let _id, processed, cart
+  ;({ _id, processed, cart, ...person } = person)
+  console.log(_id, processed, cart)
+}
+// delete person._id
+// delete person.processed
+// delete person.cart
 
 console.log(person)
 /*

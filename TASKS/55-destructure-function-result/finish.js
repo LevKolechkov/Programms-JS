@@ -7,10 +7,27 @@
  *  - Второй элемент массива - это максимальное значение среди всех аргументов.
  */
 
-let min, max
+const minMax = (...params) =>
+{
+  let minEl = params[0]
+  let maxEl = params[0]
+
+  params.forEach(el => 
+  {
+    if (el > maxEl) maxEl = el
+    if (el < minEl) minEl = el 
+  })
+
+  return [minEl, maxEl]
+}
+
+let min, max 
+
+;[min, max] = minMax(24, 5, 34, 10)
 /* Вызовите здесь функцию "minMax" с аргументами 24, 5, 34, 10 
 и используя деструктуризацию массивов присвойте значения переменным "min" и "max" */
 console.log(min, max) // 5, 34
 
+;[min, max] = minMax(18, 23, 103, 70, 80, 25)
 /* Вызовите здесь функцию "minMax" еще раз с аргументами 18, 23, 103, 70, 80, 25 */
 console.log(min, max) // 18, 103
